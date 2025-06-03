@@ -83,3 +83,57 @@ try {
 } finally {
   console.log("Execution finished.");
 }
+//-------------------------------------------------------------------------------
+function addNumbers(a, b) {
+    try {
+        if (typeof a !== 'number' || typeof b !== 'number') {
+            throw new Error("both should be numbers");
+        }
+        return a + b;
+    } catch (exp) {
+        console.log("pass valid arguments...");
+        
+    } finally {
+        console.log("execution completed");
+    }
+}
+
+console.log("the addition of two numbers are: " + addNumbers(5, 'hello'));
+//-------------------------------------------------------------------------------
+function divide(a, b) {
+    try {
+        if (b === 0) {
+            throw new Error("Denominator should not be zero");
+        }
+        return a / b;
+    } catch (err) {
+        console.log("Error occurred: " + err.message);
+    } finally {
+        console.log("Division operation completed");
+    }
+}
+
+console.log("Result: " + divide(10, 0));
+//---------------------------------------------------------------------------
+let a = 5;
+if(a===5){
+  console.log("the value is a===5");
+} 
+else if(a==5){
+  console.log("the value is a==5");
+}
+else
+{
+  console.log("the value is a=5");
+}
+//output is if statement because you give a number its fallows type also
+let b = "5";
+
+if (b === 5) {
+  console.log("strict match");
+} else if (b == 5) {
+  console.log("loose match");
+} else {
+  console.log("no match");
+}
+
