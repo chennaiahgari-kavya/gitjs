@@ -1,26 +1,30 @@
-function sleep() {
+function sleep(milliseconds) {
     var startDateTime = new Date().getTime();
-    var endDateTime = startDateTime + 2000;
+    var endDateTime = startDateTime;
     //console.log(startDateTime);
     while (startDateTime < endDateTime) {
 
     }
 }
 function step1() {
+     sleep(2000);
     console.log("step1");
-    sleep();
+   
 }
 function step2() {
+    sleep(3000);
     console.log("step2");
-    sleep();
+    
 }
 function step3() {
+    sleep(4000);
     console.log("step3");
-    sleep();
+    
 }
 function step4() {
+     sleep(5000);
     console.log("step4");
-sleep();
+   
 }
 // step1(function(){
 //     step2(function(){
@@ -29,7 +33,9 @@ sleep();
 //         });
 //     });
 // });
+console.time("my task time");
 step1();
 step2();
 step3();
 step4();
+console.timeEnd("my task time")
